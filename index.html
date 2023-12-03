@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="./icon.png">
+  <title>Chetan`s Portfolio</title>
+
+
+</head>
+
+<body>
+  <!-- //navbaar -->
+  <nav class="bg-gray-800  top-0 w-full  text-white">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button-->
+          <button type="button"
+            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            aria-controls="mobile-menu" aria-expanded="false">
+            <span class="absolute -inset-0.5"></span>
+            <span class="sr-only">Open main menu</span>
+            <!--
+                Icon when menu is closed.
+    
+                Menu open: "hidden", Menu closed: "block"
+              -->
+            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <!--
+                Icon when menu is open.
+    
+                Menu open: "block", Menu closed: "hidden"
+              -->
+            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex flex-shrink-0 items-center">
+            <h1 class="text-3xl font-bold text-blue-500 tracking-wide uppercase mr-8">
+              Portfolio
+            </h1>
+          </div>
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                aria-current="page">Dashboard</a>
+              <a href="#skills"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Skills</a>
+              <a href="#projects"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</a>
+              <a href="#about"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
+              <a href="#contact"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</a>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <button type="button"
+            class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+            <span class="absolute -inset-1.5"></span>
+            <span class="sr-only">View notifications</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+            </svg>
+          </button>
+
+          <!-- Profile dropdown -->
+          <div class="relative ml-3">
+            <div>
+              <button type="button"
+                class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                <span class="absolute -inset-1.5"></span>
+                <span class="sr-only">Open user menu</span>
+                <img class="h-8 w-8 rounded-full"
+                  src="./Chetan_Chavan_Photo1.png"
+                  alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu">
+      <div class="space-y-1 px-2 pb-3 pt-2">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+          aria-current="page">Dashb oard</a>
+        <a href="#"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Skills</a>
+        <a href="#"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
+        <a href="#"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <button variant="text">Text</button>
+  <!-- Profile -->
+  <div class="row mt-10 mb-40">
+    <div class="col-sm-6 mb-3 mb-sm-0">
+      <div
+        class="card bg-[#161b22] container mx-auto opacity-0 transform -translate-y-1 transition-all duration-1000 ease-in-out">
+        <div class="lefttsection text-white">
+          <div class="hii container">Hello...!</div>
+          My Name Is
+          <span class="text-blue-500 font-bold" style="display: inline-flexbox">Chetan</span>
+          <div>
+            And I am passionate
+            <div>
+              <!-- which line want to animate -->
+              <span id="element" class="text-blue-500 font-bold">Web Developer...</span><span
+                class="typed-cursor typed-cursor--blink" aria-hidden="true">|</span>
+            </div>
+          </div>
+          <div class="btn1 flex flex-row sm:gap-x-3 justify-center">
+            <button class="border hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition duration-300"
+              onclick="resume()">
+              resume
+            </button>
+
+            <button class="border hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition duration-300"
+              onclick="GitHub()">
+              GitHub
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 h-auto w-auto ">
+      <div class=" containerr mx-auto opacity-0 transform translate-x-11 transition-all duration-1000 ease-in-out">
+
+        <img src="./m2.png " style="background-color: #161b22; border-radius: 50%; height: 18rem;"
+          class=" border mx-48 ">
+      </div>
+    </div>
+  </div>
+  <hr class="text-white border bg-gray-200">
+
+  <!-- Skills -->
+  <h2 class="text-4xl  mb-8 mt-24 text-center text-blue-500 font-bold" id="skills">Skills</h2>
+  <section class=" mx-3 flex justify-center">
+    <section class="mx-10 border-b-2">
+      <h3 class="text-2xl font-bold text-white m-4 ">Web Development</h3>
+      <div class="flex flex-wrap gap-7">
+        <div
+          class="card  mb-3 bg-[#161b22] hover:scale-125  object-cover hover:rotate-3  transition-transform duration-500"
+          style="max-width: 18rem;">
+          <div class="card-header text-white text-center">HTML</div>
+          <img class=" h-28 w-auto p-3 " src="./htmllogo.png">
+
+        </div>
+        <div
+          class="card  mb-3 bg-[#161b22] hover:scale-125  object-cover hover:rotate-3 transition-transform duration-500"
+          style="max-width: 18rem;">
+          <div class="card-header text-white text-center">CSS</div>
+          <img class=" h-28 w-auto p-3 " src="./csslogo.png">
+
+        </div>
+        <div
+          class="card  mb-3 bg-[#161b22]  object-cover hover:rotate-3 hover:scale-125 transition-transform duration-500"
+          style="max-width: 18rem;">
+          <div class="card-header text-white text-center">JavaScript</div>
+          <img class=" h-28 w-auto p-3 " src="./jslogo.png">
+
+        </div>
+
+    </section>
+    <section class="mx-10 border-b-2 ">
+      <h3 class="text-2xl font-bold text-white m-4 ">Back-End Development</h3>
+      <div class="flex flex-wrap gap-7">
+        <div
+          class="card  mb-3 bg-[#161b22] hover:scale-125  object-cover hover:rotate-3  transition-transform duration-500"
+          style="max-width: 18rem;">
+          <div class="card-header text-white text-center">Java</div>
+          <img class=" h-28 w-auto p-3 " src="./java.png">
+
+        </div>
+        <div
+          class="card  mb-3 bg-[#161b22] hover:scale-125  object-cover hover:rotate-3 transition-transform duration-500"
+          style="max-width: 18rem;">
+          <div class="card-header text-white text-center">Hibernate</div>
+          <img class=" h-28 w-auto p-3 " src="./hibernatelogo.png">
+
+        </div>
+        <div
+          class="card  mb-3 bg-[#161b22]  object-cover hover:rotate-3 hover:scale-125 transition-transform duration-500"
+          style="max-width: 18rem;">
+          <div class="card-header text-white text-center">SpringBoot</div>
+          <img class=" h-28 w-auto p-3 " src="./spring-boot-cover_0.webp">
+
+        </div>
+
+    </section>
+    </div>
+  </section>
+  <section class=" mx-3 flex justify-center mt-9">
+    <section class="mx-10">
+      <h3 class="text-2xl font-bold text-white m-4 text-center">Libraries And frameworks</h3>
+      <div class="flex flex-wrap gap-7">
+        <div
+          class="card  mb-3 bg-[#161b22] hover:scale-125  object-cover hover:rotate-3  transition-transform duration-500"
+          style="max-width: 18rem;">
+          <div class="card-header text-white text-center">REACT</div>
+          <img class=" h-28 w-auto p-3 " src="./reactlogo.png">
+
+        </div>
+        <div
+          class="card  mb-3 bg-[#161b22] hover:scale-125  object-cover hover:rotate-3 transition-transform duration-500"
+          style="max-width: 18rem;">
+          <div class="card-header text-white text-center">Tailwind CSS</div>
+          <img class=" h-28 w-auto p-3 " src="./Tailwindlogo.png">
+
+        </div>
+
+
+        <div
+          class="card  mb-3 bg-[#161b22]  object-cover hover:rotate-3 hover:scale-125 transition-transform duration-500"
+          style="max-width: 18rem;">
+          <div class="card-header text-white text-center">Material UI</div>
+          <img class=" h-28 w-auto p-3 " src="./muilpgo.png">
+
+        </div>
+
+        <div
+          class="card  mb-3 bg-[#161b22]  object-cover hover:rotate-3 hover:scale-125 transition-transform duration-500"
+          style="max-width: 18rem;">
+          <div class="card-header text-white text-center">Redux</div>
+          <img class=" h-28 w-auto p-3 " src="./redux1.png">
+
+        </div>
+
+        <div
+          class="card  mb-3 bg-[#161b22]  object-cover hover:rotate-3 hover:scale-125 transition-transform duration-500"
+          style="max-width: 18rem;">
+          <div class="card-header text-white text-center">Bootstrap</div>
+          <img class=" h-28 w-auto p-3 " src="./bootstrap.png">
+
+        </div>
+        <div
+          class="card  mb-3 bg-[#161b22]  object-cover hover:rotate-3 hover:scale-125 transition-transform duration-500"
+          style="max-width: 18rem;">
+          <div class="card-header text-white text-center"></div>
+          <img class=" h-28 w-auto p-3 " src="./router.png">
+
+        </div>
+
+    </section>
+    <section class="mx-10 ">
+      <h3 class="text-2xl font-bold text-white m-4 text-center ">DataBase</h3>
+      <div class="flex flex-wrap gap-7">
+        <div
+          class="card  mb-3 bg-[#161b22] hover:scale-125  object-cover hover:rotate-3  transition-transform duration-500"
+          style="max-width: 18rem;">
+          <div class="card-header text-white text-center">My SQL</div>
+          <img class=" h-28 w-auto p-3 " src="./mysqllogo.png">
+
+        </div>
+        <div
+          class="card  mb-3 bg-[#161b22] hover:scale-125  object-cover hover:rotate-3 transition-transform duration-500"
+          style="max-width: 18rem;">
+          <div class="card-header text-white text-center">MongoDB</div>
+          <img class=" h-28 w-auto p-3 " src="./mongodblogo.png">
+
+        </div>
+        <div
+          class="card  mb-3 bg-[#161b22]  object-cover hover:rotate-3 hover:scale-125 transition-transform duration-500"
+          style="max-width: 18rem;">
+          <div class="card-header text-white text-center"></div>
+          <img class=" h-28 w-auto p-3 " src="./docker.png">
+
+        </div>
+
+    </section>
+    </div>
+  </section>
+  <section class=" mx-3 flex justify-center">
+    <section class="mx-10">
+      <h3 class="text-2xl font-bold text-white m-4 text-center">Cloud Platforms & Hosting</h3>
+      <div class="flex flex-wrap gap-7">
+        <div
+          class="card  mb-3 bg-[#161b22] hover:scale-125  object-cover hover:rotate-3  transition-transform duration-500"
+          style="max-width: 18rem;">
+          <div class="card-header text-white text-center">GitHub</div>
+          <img class=" h-28 w-auto p-3 " src="./gitlogo.png">
+
+        </div>
+        <div
+          class="card  mb-3 bg-[#161b22] hover:scale-125  object-cover hover:rotate-3 transition-transform duration-500"
+          style="max-width: 18rem;">
+          <div class="card-header text-white text-center">Firebase</div>
+          <img class=" h-28 w-auto p-3 " src="./firebaselogo.png">
+
+        </div>
+
+
+        <div
+          class="card  mb-3 bg-[#161b22]  object-cover hover:rotate-3 hover:scale-125 transition-transform duration-500"
+          style="max-width: 18rem;">
+          <div class="card-header text-white text-center">Netlify</div>
+          <img class=" h-28 w-auto p-3 " src="./netlify.png">
+
+        </div>
+
+        <div
+          class="card  mb-3 bg-[#161b22]  object-cover hover:rotate-3 hover:scale-125 transition-transform duration-500"
+          style="max-width: 18rem;">
+          <div class="card-header text-white text-center">Redux</div>
+          <img class=" h-28 w-auto p-3 " src="./redux1.png">
+
+        </div>
+
+        <div
+          class="card  mb-3 bg-[#161b22]  object-cover hover:rotate-3 hover:scale-125 transition-transform duration-500"
+          style="max-width: 18rem;">
+          <div class="card-header text-white text-center">Git</div>
+          <img class=" h-28 w-auto p-3 " src="./git1logo.png">
+
+        </div>
+
+    </section>
+
+    </div>
+  </section>
+  <hr class="border mt-24">
+
+
+  //projects
+  <h2 class="text-4xl  mb-8 mt-24 text-center text-blue-500 font-bold" id="projects">Projects</h2>
+  <div class="flex min-h-screen items-center bg-neutral-800 justify-evenly lg:mt-14 sm:mb-44">
+    <div class="grid grid-cols-2 sm:w-full md:grid-cols-3 lg:grid-cols-4 gap-9" id="">
+      <div
+        class="group border rounded-lg relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black/30 transition-shadow">
+        <div class="h-96 w-72 mx-auto">
+          <img
+            class="h-full w-full object-contain group-hover:rotate-3 group-hover:scale-125 group-hover:blur-md transition-transform duration-500"
+            src="./music.png" />
+        </div>
+        <div
+          class="relative inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
+        </div>
+        <div
+          class="absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all duration-300">
+          <h1 class="text-3xl font-bold text-blue-500">Music</h1>
+          <p class="text-lg italic text-white mb-3 mt-3  group-hover:opacity-100 transition-opacity duration-300">
+            "Immersive music experience with sleek design and seamless navigation for all."
+          </p>
+          <button
+            class=" rounded-md bg-blue-700  duration-100 ease-in-out transition-transform hover:scale-105 border py-2 px-3.5 text-md capitalize text-white shadow shadow-white/60">
+            <a href="./spotify/spotify.html">Live</a>
+
+          </button>
+        </div>
+      </div>
+      <div
+        class="group border rounded-lg relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black/30 transition-shadow">
+        <div class="mx-auto h-96 w-72 ">
+          <img
+            class=" h-full w-full object-contain group-hover:rotate-3 group-hover:scale-125 group-hover:blur-md transition-transform duration-500"
+            src="./ecom.png" />
+        </div>
+        <div
+          class="relative inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
+        </div>
+        <div
+          class="absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all duration-300">
+          <h1 class="text-3xl font-bold text-blue-500">Ecommerce Web Appliction</h1>
+          <p class="text-lg italic text-white mb-3 mt-3  group-hover:opacity-100 transition-opacity duration-300">
+            "Masterfully crafted an Amazon clone to showcase front-end finesse, delivering a seamless shopping
+            experience."
+          </p>
+          <button
+            class=" rounded-md bg-blue-700  duration-100 ease-in-out transition-transform hover:scale-105 border py-2 px-3.5 text-md capitalize text-white shadow shadow-white/60">
+            <a href="./Amazon_clone/index.html">Live</a>
+
+          </button>
+        </div>
+      </div>
+      <div
+        class="group border rounded-lg relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black/30 transition-shadow">
+        <div class="mx-auto h-96 w-72 ">
+          <img
+            class="h-full w-full object-contain group-hover:rotate-3 group-hover:scale-125 group-hover:blur-md transition-transform duration-500"
+            src="./cal1.png" />
+        </div>
+        <div
+          class="relative inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
+        </div>
+        <div
+          class="absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all duration-300 ">
+          <h1 class="text-3xl font-bold text-blue-500 mt-5">Dynamic Calculator </h1>
+          <p class="text-lg italic text-black mb-3 mt-3  group-hover:opacity-100 transition-opacity duration-300">
+            "Designed a sleek calculator, showcasing front-end expertise with an intuitive interface and seamless
+            functionality"
+          </p>
+          <button
+            class=" rounded-md bg-blue-700  duration-100 ease-in-out transition-transform hover:scale-105 border py-2 px-3.5 text-md capitalize text-white shadow shadow-white/60">
+            <a href="./calculator/index.html">Live</a>
+
+          </button>
+        </div>
+      </div>
+      <div
+        class="group border rounded-lg relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black/30 transition-shadow">
+        <div class="h-96 w-72 mx-auto">
+          <img
+            class="h-full w-full object-contain group-hover:rotate-3 group-hover:scale-125 group-hover:blur-md transition-transform duration-500"
+            src="./weather.png" />
+        </div>
+        <div
+          class="relative inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
+        </div>
+        <div
+          class="absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all duration-300">
+          <h1 class="text-3xl font-bold text-blue-500">Weather Web App</h1>
+          <p class="text-lg italic text-green-950 mb-3 mt-3  group-hover:opacity-100 transition-opacity duration-300">
+            "Crafted a website for real-time weather updates, empowering people with instant information"
+          </p>
+          <button
+            class=" rounded-md bg-blue-700  duration-100 ease-in-out transition-transform hover:scale-105 border py-2 px-3.5 text-md capitalize text-white shadow shadow-white/60">
+            <a href="https://65507fdf32c3824efe709571--tranquil-chimera-04914f.netlify.app/">Live</a>
+
+          </button>
+        </div>
+      </div>
+      <div
+        class="group border rounded-lg relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black/30 transition-shadow">
+        <div class="h-96 w-72 mx-auto">
+          <img
+            class="h-full w-full object-contain group-hover:rotate-3 group-hover:scale-125 group-hover:blur-md transition-transform duration-500"
+            src="./news1.png" />
+        </div>
+        <div
+          class="relative inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
+        </div>
+        <div
+          class="absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all duration-300">
+          <h1 class="text-3xl font-bold text-blue-500">NewsHub</h1>
+          <p class="text-lg italic text-green-950 mb-3 mt-3  group-hover:opacity-100 transition-opacity duration-300">
+            "Developed Web Application for quick and easy access to news updates."
+          </p>
+          <button
+            class=" rounded-md bg-blue-700  duration-100 ease-in-out transition-transform hover:scale-105 border py-2 px-3.5 text-md capitalize text-white shadow shadow-white/60">
+            <a href="https://github.com/Chaitanya0202/NewsHub" target="_blank">Live</a>
+
+          </button>
+        </div>
+      </div>
+      <div
+        class="group border rounded-lg relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black/30 transition-shadow">
+        <div class="h-96 w-72 mx-auto">
+          <img
+            class="h-full w-full object-contain group-hover:rotate-3 group-hover:scale-125 group-hover:blur-md transition-transform duration-500"
+            src="./todoList.png" />
+        </div>
+        <div
+          class="relative inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
+        </div>
+        <div
+          class="absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all duration-300">
+          <h1 class="text-3xl font-bold text-blue-500 mt-5">Task-Tracker</h1>
+          <p class="text-lg italic text-green-800 mb-3 mt-3  group-hover:opacity-100 transition-opacity duration-300">
+            " (To-Do List):Efficiently manage tasks with a user-friendly tracker, enhancing productivity and
+            organization seamlessly."
+          </p>
+          <button
+            class=" rounded-md bg-blue-700  duration-100 ease-in-out transition-transform hover:scale-105 border py-2 px-3.5 text-md capitalize text-white shadow shadow-white/60">
+            <a href="https://656bf79e19315a39671c947a--teal-phoenix-ed9dc8.netlify.app/" target="_blank">Live</a>
+
+          </button>
+        </div>
+      </div>
+      <div
+        class="group border rounded-lg relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black/30 transition-shadow">
+        <div class="h-96 w-72 mx-auto">
+          <img
+            class="h-full w-full object-contain group-hover:rotate-3 group-hover:scale-125 group-hover:blur-md transition-transform duration-500"
+            src="./text-editor1.png" />
+        </div>
+        <div
+          class="relative inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
+        </div>
+        <div
+          class="absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all duration-300">
+          <h1 class="text-3xl font-bold text-blue-500 mt-5">QuickEdit</h1>
+          <p class="text-lg italic text-black mb-3 mt-3  group-hover:opacity-100 transition-opacity duration-300">
+            "TextEditor: Simplified text editor for seamless writing and editing, enhancing your creative process."
+          </p>
+          <button
+            class=" rounded-md bg-blue-700  duration-100 ease-in-out transition-transform hover:scale-105 border py-2 px-3.5 text-md capitalize text-white shadow shadow-white/60">
+            <a href="https://656bfb7178668a3d947fd2f1--heroic-starlight-ee2573.netlify.app/" target="_blank">Live</a>
+
+          </button>
+        </div>
+      </div>
+      <div
+        class="group border rounded-lg relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black/30 transition-shadow">
+        <div class="h-96 w-72 mx-auto">
+          <img
+            class="h-full w-full object-contain group-hover:rotate-3 group-hover:scale-125 group-hover:blur-md transition-transform duration-500"
+            src="./foodAppLogo.png" />
+        </div>
+        <div
+          class="relative inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
+        </div>
+        <div
+          class="absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all duration-300">
+          <h1 class="text-3xl font-bold text-blue-500 mt-28">QuickBite</h1>
+          <p class="text-lg italic text-black mb-3 mt-3  group-hover:opacity-100 transition-opacity duration-300">
+            "Developed a user-friendly web app with Java and React, offering a seamless experience for ordering food and
+            a rich array of functionalities for a dynamic user experience"
+          </p>
+          <button
+            class=" rounded-md bg-blue-700  duration-100 ease-in-out transition-transform hover:scale-105 border py-2 px-3.5 text-md capitalize text-white shadow shadow-white/60">
+            <a href="https://github.com/Chaitanya0202/food-odering-webApp" target="_blank">Live</a>
+
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- //log in form -->
+  <div
+    class="w-full sm:mt-96  max-w-sm  mx-auto p-4  border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 mb-10"
+    id="contact">
+    <form class="space-y-6" method="post">
+      <h5 class="text-xl font-medium text-gray-900 dark:text-white">
+        Get In Touch
+      </h5>
+      <div>
+        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Name</label>
+        <input type="text" name="name" id="name"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+          placeholder="Enter Your Good Name" required />
+      </div>
+      <div>
+        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+        <input type="email" name="email" id="email"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+          placeholder="name@company.com" required />
+      </div>
+      <div>
+        <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Message</label>
+        <textarea type="text" name="msg" id="msg"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+          placeholder="Your Message" required></textarea>
+      </div>
+
+
+      <button type="submit" id="btn"
+        class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        Send
+      </button>
+
+    </form>
+  </div>
+
+  <section class="text-[#d0eade]">
+
+    <hr>
+    <div id="About">
+      <h1 class="font-extrabold text-4xl text-center  text-blue-600 mt-10 ">About</h1>
+      
+      <br />
+    </div>
+    <div class="about1 font-extrabold text-white text-2xl m-8">
+      Experienced full-stack Java developer well-versed in Spring Boot. Adept at crafting innovative web solutions,
+      proficient in Java, SQL, and skilled in hoisting websites. Constantly learning, I'm a valuable asset for efficient
+      and creative solutions in any full-stack project.
+    </div>
+    <hr />
+    <div id="contact" class="font-extrabold  text-2xl m-8">
+      <div>
+        <h1>Name : Chetan Chavan</h1>
+      </div>
+
+      <div class="email">
+        <h1>
+          Email :
+          <a href="mailto:">cc5032949@gmail.com
+            <i class="fa-solid fa-up-right-from-square"></i></a>
+        </h1>
+        <h1>Phone no : <a href="tel:7767973361">7767973361</a></h1>
+      </div>
+      <div class="icon1">
+        <a href="https://www.linkedin.com/in/chetan-chavan-003537251/" target="_blank"><i
+            class="fa-brands fa-linkedin"></i></a><a href="https://github.com/Chaitanya0202" target="_blank"><i
+            class="fa-brands fa-github"></i></a><a href="mailto:cc5032949@gmail.com"><i
+            class="fa-solid fa-envelope"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <hr />
+
+  </section>
+
+
+
+
+  <!-- // send Email getting from contact from -->
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script>
+
+    var btn = document.getElementById('btn');
+    btn.addEventListener('click', function (e) {
+      e.preventDefault()
+      Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "cc5032949@gmail.com",
+        Password: "CF566D7FDC91B5A321DABFBBD9E5490275D4",
+        To: 'cc5032949@gmail.com',
+        From: document.getElementById('email').value,
+        Subject: "This is the subject",
+        Body: "And this is the body"
+      }).then(
+        message => alert(message)
+
+      );
+      console.log(message)
+    })
+
+    // type js cdn
+
+    // <!-- using type js which is library of javascript -->
+
+    function resume() {
+      window.open(
+        "https://drive.google.com/file/d/1NWsZe6JdO0FhgPF9NbipcAsXgOJksBKF/view?usp=drivesdk",
+        "_blank"
+      );
+    }
+    function GitHub() {
+      window.open("https://github.com/Chaitanya0202", "_blank");
+    }
+    var typed = new Typed("#element", {
+      strings: [
+        "<i></i> JAVA FULL STACK  DEVELOPER...",
+        " REACT DEVELOPER...",
+        " WEB DEVELOPER...",
+      ],
+      typeSpeed: 100,
+    });
+  </script>
+
+
+
+
+
+  <!-- for slide lefttsection -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Add 'opacity-100' and 'translate-y-0' classes to content after a short delay
+      setTimeout(function () {
+        document
+          .querySelector(".container")
+          .classList.add("opacity-100", "translate-x-11");
+      }, 1200); // Adjust the delay (in milliseconds) based on your preference
+      setTimeout(function () {
+        document
+          .querySelector(".containerr")
+          .classList.add("opacity-100", "translate-x-2");
+      }, 1200);
+    });
+
+
+
+  </script>
+</body>
+
+</html>
