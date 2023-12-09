@@ -684,7 +684,7 @@ const onSubmitHandler = async (e) => {
             };
 
             try {
-                await axios.post(`http://localhost:8080/viewer`, user);
+                await axios.post(`https://contact-server-production.up.railway.app/viewer`, user);
                 // navigate("/");
                 console.log("HELLO SUCCRSE")
                 alert(" Thank You ..! \n I will Connect you Shortly..")
