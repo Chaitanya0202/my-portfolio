@@ -66,7 +66,7 @@
             </h1>
           </div>
           <div class="hidden sm:ml-6 sm:block">
-            <div class="flex space-x-4">
+            <div class="flex space-x-4 text-uppercase">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
                 aria-current="page">Dashboard</a>
@@ -124,7 +124,7 @@
         <div class="lefttsection text-white">
           <div class="hii container">Hello...!</div>
           My Name Is
-          <span class="text-blue-500 font-bold" style="display: inline-flexbox">Chetan</span>
+          <span class="text-blue-500 font-bold text-uppercase" style="display: inline-flexbox">Chetan</span>
           <div>
             And I am passionate
             <div>
@@ -357,6 +357,30 @@
   <div class="flex min-h-screen items-center bg-neutral-800 justify-evenly lg:mt-14 sm:mb-44">
     <div class="grid grid-cols-2 sm:w-full md:grid-cols-3 lg:grid-cols-4 gap-9" id="">
       <div
+      class="group border rounded-lg relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black/30 transition-shadow">
+      <div class="h-96 w-72 mx-auto">
+        <img
+          class="h-full w-full object-contain group-hover:rotate-3 group-hover:scale-125 group-hover:blur-md transition-transform duration-500"
+          src="./foodAppLogo.png" />
+      </div>
+      <div
+        class="relative inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
+      </div>
+      <div
+        class="absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all duration-300">
+        <h1 class="text-3xl font-bold text-blue-500 mt-28">QuickBite</h1>
+        <p class="text-lg italic text-black mb-3 mt-3  group-hover:opacity-100 transition-opacity duration-300">
+          "Developed a user-friendly web app with Java and React, offering a seamless experience for ordering food and
+          a rich array of functionalities for a dynamic user experience"
+        </p>
+        <button
+          class=" rounded-md bg-blue-700  duration-100 ease-in-out transition-transform hover:scale-105 border py-2 px-3.5 text-md capitalize text-white shadow shadow-white/60">
+          <a href="https://food-rouge-xi.vercel.app/" target="_blank">Live</a>
+
+        </button>
+      </div>
+    </div>
+      <div
         class="group border rounded-lg relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black/30 transition-shadow">
         <div class="h-96 w-72 mx-auto">
           <img
@@ -520,30 +544,7 @@
           </button>
         </div>
       </div>
-      <div
-        class="group border rounded-lg relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black/30 transition-shadow">
-        <div class="h-96 w-72 mx-auto">
-          <img
-            class="h-full w-full object-contain group-hover:rotate-3 group-hover:scale-125 group-hover:blur-md transition-transform duration-500"
-            src="./foodAppLogo.png" />
-        </div>
-        <div
-          class="relative inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
-        </div>
-        <div
-          class="absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all duration-300">
-          <h1 class="text-3xl font-bold text-blue-500 mt-28">QuickBite</h1>
-          <p class="text-lg italic text-black mb-3 mt-3  group-hover:opacity-100 transition-opacity duration-300">
-            "Developed a user-friendly web app with Java and React, offering a seamless experience for ordering food and
-            a rich array of functionalities for a dynamic user experience"
-          </p>
-          <button
-            class=" rounded-md bg-blue-700  duration-100 ease-in-out transition-transform hover:scale-105 border py-2 px-3.5 text-md capitalize text-white shadow shadow-white/60">
-            <a href="https://food-rouge-xi.vercel.app/" target="_blank">Live</a>
-
-          </button>
-        </div>
-      </div>
+  
     </div>
   </div>
   <hr class="border mt-24">
