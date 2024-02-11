@@ -118,3 +118,12 @@ main hr {
       /* background-color: blue; */
   }
 }
+@media only screen and (max-width: 566px) {
+  .profileAdj{
+      
+      display: flex;
+      flex-direction: column-reverse;
+      
+  }
+}
+
